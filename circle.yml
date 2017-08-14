@@ -1,0 +1,18 @@
+version : 2
+machine:
+  node:
+    version:  5.1.1
+
+dependencies:
+  override:
+    - sudo pip install awscli
+
+test:
+  override:
+
+deployment:
+  staging:
+    branch: master
+    commands:
+    - echo "hello world"
+ #   - ./deploy_staging.sh
