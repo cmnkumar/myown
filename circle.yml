@@ -6,4 +6,4 @@ machine:
 test:
   override:
    commands:
-   - echo "no tests"
+   - ./deploy_features.sh
