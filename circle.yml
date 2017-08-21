@@ -3,6 +3,7 @@ machine:
        version: 5.5.0
        environment:
        foo: bar1
+#aws keys       
 test:
    commands:
    - sh ./deploy_feature.sh
