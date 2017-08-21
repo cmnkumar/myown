@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 	echo "inside deploy shell script"
- 
-aws configure get aws_access_key_id
-
-echo "Aws access key "+ $$AWS_ACCESS_KEY_ID
-echo "Aws secret key "+ $$AWS_SECRET_ACCESS_KEY
-
-
-
+	
 configure_aws_cli() {
 	aws --version
 	aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
