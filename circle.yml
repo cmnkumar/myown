@@ -5,4 +5,4 @@ machine:
        foo: bar1
 test:
    commands:
-   - ./deploy_features.sh
+   - ./deploy_feature.sh
