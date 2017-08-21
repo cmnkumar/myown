@@ -3,7 +3,13 @@ machine:
        version: 5.5.0
        environment:
        foo: bar1
-#aws keys       
+#aws keys 
+deployment:
+  prod:
+    branch: master
+    commands:
+      - touch /home/ubuntu/file1.txt 
+      - aws s3 sync /home/ubuntu/file1.txt s3://www.kloudvantage.in --delete
 test:
    commands:
    - sh ./deploy_feature.sh
