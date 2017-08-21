@@ -4,6 +4,5 @@ machine:
        environment:
        foo: bar1
 test:
-  override:
    commands:
    - ./deploy_features.sh
