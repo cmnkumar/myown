@@ -1,17 +1,17 @@
-  ruby:
-    version:
-      1.8.7-p358-falcon-perf
-
-    dependencies: 
-      override:
+machine:
+  node:
+    version: 5.5.0
+  environment:
+    foo: bar1
+ dependencies:
+    override:
     - sudo pip install awscli
 
-test:
+ test:
   override:
-
-deployment:
+  
+  deployment:
   staging:
     branch: master
     commands:
     - echo "hello world"
- #   - ./deploy_staging.sh
