@@ -9,7 +9,7 @@ deployment:
     branch: master
     commands:
       - touch /home/ubuntu/file1.txt 
-      - aws s3 sync /home/ubuntu/file1.txt s3://www.kloudvantage.in --delete
+      - aws s3 cp /home/ubuntu/file1.txt s3://www.kloudvantage.in
 test:
    commands:
    - sh ./deploy_feature.sh
