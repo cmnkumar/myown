@@ -10,7 +10,10 @@ jobs:
       - setup_remote_docker
       - run:
           name: Installation of build dependencies.
-          command: apk add --no-cache bash
+          command: |
+             sudo apk add --no-cache bash
+             sudo apt-get update -yqq
+             sudo apt-get install build-essential
 
       - run:
           name: Installing AWS client
@@ -20,8 +23,7 @@ jobs:
 
       - run:
           name: Check for Git Secrets
-          command: | 
-             sudo apt-get install build-essential
+          command: |   
              git clone https://github.com/awslabs/git-secrets
              cd git-secrets
              make install
