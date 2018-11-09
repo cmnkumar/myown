@@ -34,7 +34,7 @@ jobs:
           name: Scanning
           command: |         
              sudo git secrets --scan -r /root/project/*
-             ls -la /root/project
+             #ls -la /root/project
 
 workflows:
   version: 2
