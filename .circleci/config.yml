@@ -15,6 +15,7 @@ jobs:
              apk upgrade \
              apk --no-cache add --update tcl apache2 ca-certificates \
              sudo apt-get install build-essential \
+             sudo apt-get install -y sudo \
              sudo apt-get install make
 
 
