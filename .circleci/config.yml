@@ -15,8 +15,7 @@ jobs:
              apk upgrade \
              apk --no-cache add --update tcl apache2 ca-certificates \
              sudo apt-get install build-essential \
-             sudo apt-get install -y sudo \
-             sudo apt-get install make
+             apt-get install make
 
 
       - run:
@@ -25,10 +24,10 @@ jobs:
              echo "AWS_ACCOUNT_ID=811558471234" > /root/project/t1.txt
              git clone https://github.com/awslabs/git-secrets 
              cd git-secrets 
-             sudo make install 
-             sudo git secrets --install ~/.git-templates/git-secrets 
-             sudo git config --global init.templateDir ~/.git-templates/git-secrets 
-             sudo git secrets --register-aws --global 
+             make install 
+             git secrets --install ~/.git-templates/git-secrets 
+             git config --global init.templateDir ~/.git-templates/git-secrets 
+             git secrets --register-aws --global 
              
       - run:
           name: Scanning
