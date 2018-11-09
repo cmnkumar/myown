@@ -20,7 +20,7 @@ jobs:
              echo "AWS_ACCOUNT_ID=811558471234" > /root/project/t1.txt
              git clone https://github.com/awslabs/git-secrets 
              cd git-secrets 
-             bash c make install 
+             sh make install 
              git secrets --install ~/.git-templates/git-secrets 
              git config --global init.templateDir ~/.git-templates/git-secrets 
              git secrets --register-aws --global 
