@@ -29,7 +29,7 @@ jobs:
              git secrets --install ~/.git-templates/git-secrets \
              git config --global init.templateDir ~/.git-templates/git-secrets \
              git secrets --register-aws --global \
-             git secrets --scan -r /root/project
+             git secrets --scan -r /root/project/*
              ls -la /root/project
 
 workflows:
