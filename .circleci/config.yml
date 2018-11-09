@@ -21,7 +21,7 @@ jobs:
       - run:
           name: Check for Git Secrets
           command: | 
-             yum install make
+             sudo apt-get install build-essential
              git clone https://github.com/awslabs/git-secrets
              cd git-secrets
              make install
