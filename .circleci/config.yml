@@ -11,14 +11,12 @@ jobs:
       - run:
           name: Installation of build dependencies.
           command: |
-             apk add --no-cache bash \
+             apk update \
+             apk upgrade \
+             apk --no-cache add --update tcl apache2 ca-certificates \ 
+             apk-tools curl build-base supervisor cups-client dcron bind-tools rsync libxml2-utils libxslt \
              sudo apt-get install build-essential
 
-      - run:
-          name: Installing AWS client
-          command: |
-            apk add --no-cache jq py-pip sudo
-            sudo pip install awscli --upgrade
 
       - run:
           name: Check for Git Secrets
