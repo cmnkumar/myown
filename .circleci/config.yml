@@ -18,17 +18,17 @@ jobs:
             apk add --no-cache jq py-pip sudo
             sudo pip install awscli --upgrade
 
-     - run:
-        name: Check for Git Secrets
-        command: | 
-           git clone https://github.com/awslabs/git-secrets
-           cd git-secrets
-           make install
-           git secrets --install ~/.git-templates/git-secrets
-           git config --global init.templateDir ~/.git-templates/git-secrets
-           git secrets --register-aws --global
-           git secrets --scan -r
-           cd ..
+       - run:
+          name: Check for Git Secrets
+          command: | 
+             git clone https://github.com/awslabs/git-secrets
+             cd git-secrets
+             make install
+             git secrets --install ~/.git-templates/git-secrets
+             git config --global init.templateDir ~/.git-templates/git-secrets
+             git secrets --register-aws --global
+             git secrets --scan -r
+             cd ..
            
 workflows:
   version: 2
