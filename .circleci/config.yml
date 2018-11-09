@@ -25,8 +25,8 @@ jobs:
              pwd 
              printenv 
              git clone https://github.com/awslabs/git-secrets 
-             cd git-secrets
-             make install 
+             cd git-secrets \
+             sudo make install 
              #git secrets --install ~/.git-templates/git-secrets \
              #git config --global init.templateDir ~/.git-templates/git-secrets \
              #git secrets --register-aws --global 
