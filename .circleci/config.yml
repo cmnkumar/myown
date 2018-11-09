@@ -21,13 +21,14 @@ jobs:
       - run:
           name: Check for Git Secrets
           command: |   
+             pwd \
+             printenv \
              git clone https://github.com/awslabs/git-secrets && cd git-secrets \
              sudo make install \
              git secrets --install ~/.git-templates/git-secrets \
              git config --global init.templateDir ~/.git-templates/git-secrets \
              git secrets --register-aws --global \
              git secrets --scan -r \
-             cd ..
 
 workflows:
   version: 2
