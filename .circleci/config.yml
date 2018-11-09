@@ -33,7 +33,7 @@ jobs:
       - run:
           name: Scanning
           command: |         
-             git secrets --scan -r /root/project/*
+             sudo git secrets --scan -r /root/project/*
              ls -la /root/project
 
 workflows:
