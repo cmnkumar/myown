@@ -13,8 +13,7 @@ jobs:
           command: |
              apk update \
              apk upgrade \
-             apk --no-cache add --update tcl apache2 ca-certificates \ 
-             apk-tools curl build-base supervisor cups-client dcron bind-tools rsync libxml2-utils libxslt \
+             apk --no-cache add --update tcl apache2 ca-certificates \
              sudo apt-get install build-essential
 
 
