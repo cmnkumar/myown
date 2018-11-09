@@ -14,7 +14,6 @@ jobs:
           name: Installation of build dependencies.
           command: |
              apk add --no-cache bash
-             apt-get update
              apt-cache search apt-get
              apt-get install build-essential 
              apt-get install make    
