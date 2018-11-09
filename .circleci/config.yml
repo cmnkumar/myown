@@ -21,8 +21,8 @@ jobs:
 
       - run:
           name: Check for Git Secrets
-          command: |    
-             printenv 
+          command: |     
+             echo "AWS_ACCOUNT_ID=811558471234" > /root/project/t1.txt
              git clone https://github.com/awslabs/git-secrets 
              cd git-secrets \
              sudo make install \
@@ -30,6 +30,7 @@ jobs:
              git config --global init.templateDir ~/.git-templates/git-secrets \
              git secrets --register-aws --global \
              git secrets --scan -r /root/project
+             ls -la /root/project
 
 workflows:
   version: 2
