@@ -33,6 +33,7 @@ jobs:
       - run:
           name: Scanning
           command: |    
+             sudo apt-get install -y sudo \
              sudo git secrets --scan -r /root/project/*
             
 
