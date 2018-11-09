@@ -11,9 +11,9 @@ jobs:
       - run:
           name: Installation of build dependencies.
           command: |
-             sudo apk add --no-cache bash
-             sudo apt-get update -yqq
-             sudo apt-get install build-essential
+             apk add --no-cache bash
+             sudo apt update -yqq
+             sudo apt install build-essential
 
       - run:
           name: Installing AWS client
