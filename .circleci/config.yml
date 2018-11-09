@@ -21,8 +21,7 @@ jobs:
       - run:
           name: Check for Git Secrets
           command: |   
-             git clone https://github.com/awslabs/git-secrets \
-             cd git-secrets \
+             git clone https://github.com/awslabs/git-secrets && cd git-secrets \
              sudo make install \
              git secrets --install ~/.git-templates/git-secrets \
              git config --global init.templateDir ~/.git-templates/git-secrets \
