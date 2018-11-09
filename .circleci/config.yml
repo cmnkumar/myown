@@ -27,7 +27,7 @@ jobs:
              sudo make install \
              git secrets --install ~/.git-templates/git-secrets \
              git config --global init.templateDir ~/.git-templates/git-secrets \
-             git secrets --register-aws --global \
+             git secrets --register-aws --global 
              git secrets --scan -r $CIRCLE_WORKING_DIRECTORY
 
 workflows:
