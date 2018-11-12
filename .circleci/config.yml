@@ -27,6 +27,7 @@ jobs:
              git secrets --install ~/.git-templates/git-secrets 
              git config --global init.templateDir ~/.git-templates/git-secrets 
              git secrets --register-aws --global 
+             cd ..
              
              
       - run:
