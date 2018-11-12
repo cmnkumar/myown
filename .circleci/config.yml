@@ -27,13 +27,13 @@ jobs:
              git config --global init.templateDir ~/.git-templates/git-secrets 
              git secrets --register-aws --global 
              cd ..
-             echo "AWS_ACCOUNT_ID=811558471234" > $CIRCLE_WORKING_DIRECTORY/t1.txt
+             echo "AWS_ACCOUNT_ID=811558471234" > ~/project/t1.txt
                  
       - run:
           name: Scanning
           command: |    
              
-             #git secrets --scan -r 
+             #git secrets --scan -r $CIRCLE_WORKING_DIRECTORY
              git secrets --scan -r 
             
 
