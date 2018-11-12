@@ -28,10 +28,11 @@ jobs:
              git config --global init.templateDir ~/.git-templates/git-secrets 
              git secrets --register-aws --global 
              
+             
       - run:
           name: Scanning
           command: |    
-             git secrets --scan -r ~/project/*
+             git secrets --scan -r $CIRCLE_WORKING_DIRECTORY
             
 
 workflows:
