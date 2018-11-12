@@ -4,8 +4,8 @@ jobs:
   "buildp":
     docker:
       - image: docker:17.06.1-ce-git
-        environment:
-          ENV: $BASH_ENV
+        #environment:
+        #  ENV: $BASH_ENV
     steps:
       # Initialization.
       - checkout
@@ -14,7 +14,7 @@ jobs:
           name: Installation of build dependencies.
           command: |
              apk update
-             apk add alpine-sdk
+            # apk add alpine-sdk
              apk upgrade
              apk add make
              #apt-get install make    
