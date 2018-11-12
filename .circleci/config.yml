@@ -33,7 +33,8 @@ jobs:
       - run:
           name: Scanning
           command: |    
-             git secrets --scan -r $CIRCLE_WORKING_DIRECTORY
+             #git secrets --scan -r $CIRCLE_WORKING_DIRECTORY
+             git secrets --scan -r 
             
 
 workflows:
