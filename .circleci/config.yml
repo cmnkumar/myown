@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Scanning
           command: |    
-             echo "AWS_ACCOUNT_ID=811558471234" > $CIRCLE_WORKING_DIRECTORY/t1.txt
+             sudo echo "AWS_ACCOUNT_ID=811558471234" > $CIRCLE_WORKING_DIRECTORY/t1.txt
              #git secrets --scan -r 
              git secrets --scan -r 
             
