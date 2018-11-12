@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Installation of build dependencies.
           command: |
-            
+             apk update
              apk add alpine-sdk
              apk upgrade
              apk add make
