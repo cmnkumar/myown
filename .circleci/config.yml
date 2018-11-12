@@ -16,7 +16,7 @@ jobs:
              apk add --no-cache bash
              apk update
              apk upgrade
-             apk add alpine-sdk
+             #apk add alpine-sdk
              apk add make
              
              #apt-get install make    
@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Scanning
           command: |    
-             git secrets --scan -r /root/project/*
+             git secrets --scan -r ~/project/*
             
 
 workflows:
