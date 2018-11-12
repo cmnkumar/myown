@@ -20,7 +20,7 @@ jobs:
              apk add make
              
              #apt-get install make    
-             echo "AWS_ACCOUNT_ID=811558471234" > /root/project/t1.txt
+             #echo "AWS_ACCOUNT_ID=811558471234" > /root/project/t1.txt
              git clone https://github.com/awslabs/git-secrets 
              cd git-secrets 
              make install 
