@@ -34,7 +34,19 @@ jobs:
              
              #git secrets --scan -r $CIRCLE_WORKING_DIRECTORY
              git secrets --scan -r 
-            
+             
+             
+notify:
+  webhooks:
+    - url: https://foo.bar.com/build-webhook
+experimental:
+  notify:
+    branches:
+      only:
+        - master
+        - staging
+        
+        
 
 workflows:
   version: 2
