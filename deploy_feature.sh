@@ -7,7 +7,7 @@ configure_aws_cli() {
 	aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
 	echo $AWS_ACCESS_KEY_ID
 	echo $AWS_SECRET_ACCESS_KEY
-	DEV_AWS_ACCOUNT_ID=81155847123s
+	DEV_AWS_ACCOUNT_ID=811558471231
 	
 	#aws configure set default.region $AWS_REGION
 	aws configure set default.output json
