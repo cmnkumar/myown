@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-	echo "testing in23 blah lah inside deploy shell script"
+	echo "testing in23 blah lah inside deploy shell scriptv"
 	
 configure_aws_cli() {
 	aws --version
