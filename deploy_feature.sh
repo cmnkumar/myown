@@ -10,7 +10,7 @@ configure_aws_cli() {
 	AWS_ACCOUNT_ID=811558471815
 	
 	#aws configure set default.region $AWS_REGION
-	aws configure set default.output json
+	aws configure set default.output jso n
 	echo "Configured AWS CLI."
 }
 configure_aws_cli
