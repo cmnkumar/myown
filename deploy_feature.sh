@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-	echo "testing in23 blah lah inside deploy shell vsccript  v   "
+	echo "testing in23 blah lah inside deploy eshell vsccript  v   "
 configure_aws_cli() {
 	aws --version 
 	aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
